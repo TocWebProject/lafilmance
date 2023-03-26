@@ -32,12 +32,12 @@ import gsap from 'gsap';
     <div ref="introContainer" class="intro-container">
         <div ref="screen1" class="screen1">
             <video ref="videoPlayer" width="320" height="240" autoplay loop muted>
-                <source src="\videos\home\background\production ID_4990242.mp4"  type="video/mp4" />
+                <source src="\videos\home\background\production_ID_4990242.mp4"  type="video/mp4" />
             </video>
         </div>
         <div ref="screen2" class="screen2">
             <video ref="videoPlayer" width="320" height="240" autoplay loop muted>
-                <source src="\videos\home\background\production ID_4990242.mp4"  type="video/mp4" />
+                <source src="\videos\home\background\production_ID_4990242.mp4"  type="video/mp4" />
             </video>
         </div>
     </div>
