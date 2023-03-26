@@ -1,0 +1,22 @@
+$breakpoint-tablet: 1095px; 
+$breakpoint-mobile: 480px; 
+
+@each $font in ('DrukText-Bold', 'DrukText-BoldItalic', 'DrukText-Heavy', 'DrukText-HeavyItalic', 'DrukText-Medium', 'DrukText-MediumItalic', ) {
+  @font-face {
+    font-family: #{$font};
+    src: url('/fonts/#{ $font }.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+a, button {
+  cursor: crosshair;
+}
