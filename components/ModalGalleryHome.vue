@@ -127,35 +127,40 @@ onMounted(() => {
             <p>{{ currentVideo.description }}</p>
             <button @click="closePopupVideo">Close</button>
         </div>
+
         <div ref="modal" v-show="open" class="modal" v-bind:class="{ 'overflow-hidden': showVideo }">
-            <div v-for="(video, index) in videos" :key="index" class="video-thumbnail" @click="showTheVideo(index)">
-                <video width="320" height="240" autoplay loop muted>
-                    <source :src="video.loop" type="video/mp4" />
-                </video>
-                <div class="moving-banner">
-                    <div class="wrapper">
-                        <span>{{ video.title }} -</span>
-                        <span>{{ video.description }} -</span>
-                        <span>{{ video.title }} -</span>
-                        <span>{{ video.description }} -</span>
-                        <span>{{ video.title }} -</span>
-                        <span>{{ video.description }} -</span>
-                        <span>{{ video.title }} -</span>
-                        <span>{{ video.description }} -</span>
-                        <span>{{ video.title }} -</span>
-                        <span>{{ video.description }} -</span>
-                        <span>{{ video.title }} -</span>
-                        <span>{{ video.description }} -</span>
-                        <span>{{ video.title }} -</span>
-                        <span>{{ video.description }} -</span>
-                        <span>{{ video.title }} -</span>
-                        <span>{{ video.description }} -</span>
+            <button class="close-modal" v-if="open" @click="closeTheModal">
+                X
+            </button>
+
+            <div class="inner-modal">
+                <div v-for="(video, index) in videos" :key="index" class="video-thumbnail" @click="showTheVideo(index)">
+                    <video width="320" height="240" autoplay loop muted>
+                        <source :src="video.loop" type="video/mp4" />
+                    </video>
+                    <div class="moving-banner">
+                        <div class="wrapper">
+                            <span>{{ video.title }} -</span>
+                            <span>{{ video.description }} -</span>
+                            <span>{{ video.title }} -</span>
+                            <span>{{ video.description }} -</span>
+                            <span>{{ video.title }} -</span>
+                            <span>{{ video.description }} -</span>
+                            <span>{{ video.title }} -</span>
+                            <span>{{ video.description }} -</span>
+                            <span>{{ video.title }} -</span>
+                            <span>{{ video.description }} -</span>
+                            <span>{{ video.title }} -</span>
+                            <span>{{ video.description }} -</span>
+                            <span>{{ video.title }} -</span>
+                            <span>{{ video.description }} -</span>
+                            <span>{{ video.title }} -</span>
+                            <span>{{ video.description }} -</span>
+                        </div>
                     </div>
                 </div>
             </div>
-            <button v-if="!showVideo" @click="closeTheModal">
-                X
-            </button>
+
         </div>
     </Teleport>
 </template>
@@ -324,30 +329,12 @@ onMounted(() => {
     overflow-y: hidden !important;
 }
 
-
 .modal {
-    /*
-    *  Modal Scrollbar style
-    */
-    &::-webkit-scrollbar-track {
-        border: 2px solid #000000;
-        background-color: #F5F5F5;
-    }
-
-    &::-webkit-scrollbar {
-        width: 10px;
-        background-color: #F5F5F5;
-    }
-
-    &::-webkit-scrollbar-thumb {
-        background-color: #000000;
-    }
-
     border: 2px white solid;
     font-family: 'DrukText-Bold';
     background-color: black;
     z-index: 11;
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -357,73 +344,107 @@ onMounted(() => {
     overflow-y: scroll;
     overflow-x: hidden;
 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-
     @media screen and (max-width: $breakpoint-mobile) {
         width: 90vw;
         height: 78vh;
     }
-          
-    button {
-        position: fixed;
+
+    .close-modal {
+        position: absolute;
+        /* don't need to go crazy with z-index here, just sits over .modal-guts */
+        z-index: 12;
+
         top: 10px;
-        right: 10px;
+
+        /* needs to look OK with or without scrollbar */
+        right: 20px;
+        position: absolute;
         color: white;
         padding: 5px;
         font-size: 2rem;
         cursor: crosshair;
+        z-index: 20;
     }
 
-    .video-thumbnail {
-        cursor: pointer;
-        width: 33.3%;
-        height: auto;
-        position: relative;
-        border: 1px white solid;
-        overflow: hidden;
+    .inner-modal {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
 
-        // styles spécifiques pour la tablette
-        @media screen and (max-width: $breakpoint-tablet) {
-            width: 50%;
+        /*
+        *  Modal Scrollbar style
+        */
+        &::-webkit-scrollbar-track {
+            border: 2px solid #000000;
+            background-color: #F5F5F5;
         }
 
-        // styles spécifiques pour le mobile
+        &::-webkit-scrollbar {
+            width: 10px;
+            background-color: #F5F5F5;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: #000000;
+        }
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
         @media screen and (max-width: $breakpoint-mobile) {
-            width: 100%;
+            width: 90vw;
+            height: 78vh;
         }
 
-        video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
- 
-
-
-        .moving-banner {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
+        .video-thumbnail {
+            cursor: pointer;
+            width: 33.3%;
             height: auto;
+            position: relative;
+            border: 1px white solid;
+            overflow: hidden;
 
-            .wrapper {
+            // styles spécifiques pour la tablette
+            @media screen and (max-width: $breakpoint-tablet) {
+                width: 50%;
+            }
+
+            // styles spécifiques pour le mobile
+            @media screen and (max-width: $breakpoint-mobile) {
+                width: 100%;
+            }
+
+            video {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .moving-banner {
+                position: absolute;
+                bottom: 0;
                 width: 100%;
                 height: auto;
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                width: max-content;
-                background-color: black;
 
-                span {
-                    padding: 7px 0px;
-                    font-size: 1.3rem;
-                    color: white;
+                .wrapper {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    width: max-content;
+                    background-color: black;
+
+                    span {
+                        padding: 7px 0px;
+                        font-size: 1.3rem;
+                        color: white;
+                    }
                 }
-
             }
         }
     }
