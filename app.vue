@@ -1,38 +1,34 @@
 <script lang="ts" setup>
-    const nuxtApp = useNuxtApp();
-    const loading = ref(false);
+const nuxtApp = useNuxtApp();
+const loading = ref(false);
 
-    nuxtApp.hook("page:start", () => {
+nuxtApp.hook("page:start", () => {
     loading.value = true;
-    });
+});
 
-    nuxtApp.hook("page:finish", () => {
+nuxtApp.hook("page:finish", () => {
     loading.value = false;
-    });
+});
 
 </script>
 
 <template>
-  <div>
-    <ClientOnly>
-        <div
-      v-if="loading"
-      class="loading"
-    >
-        <p>
-            LAFILMANCE
-        </p>
+    <div>
+        <ClientOnly>
+            <div v-if="loading" class="loading">
+                <p>
+                    LAFILMANCE
+                </p>
+            </div>
+            <NavBar />
+            <NuxtLoadingIndicator />
+            <NuxtPage keepalive />
+        </ClientOnly>
     </div>
-        <NavBar/> 
-        <NuxtLoadingIndicator />
-        <NuxtPage keepalive/>
-    </ClientOnly>
-  </div>
 </template>
 
 <style lang="scss">
-
-.loading{
+.loading {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -56,12 +52,13 @@
 /* Global Page Transitions */
 .page-enter-active,
 .page-leave-active {
-  transition: all 1s;
+    transition: all 1s;
 }
+
 .page-enter-from,
 .page-leave-to {
-  opacity: 0;
-  filter: blur(1rem);
+    opacity: 0;
+    filter: blur(1rem);
 }
 
 body {
@@ -79,7 +76,7 @@ body {
     Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
     - The "symbol *" part is to solve Firefox SVG sprite bug
  */
- *:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
     all: unset;
     display: revert;
 }
@@ -92,12 +89,15 @@ body {
 }
 
 /* Reapply the pointer cursor for anchor tags */
-a, button {
+a,
+button {
     cursor: revert;
 }
 
 /* Remove list styles (bullets/numbers) */
-ol, ul, menu {
+ol,
+ul,
+menu {
     list-style: none;
 }
 
@@ -113,7 +113,8 @@ table {
 }
 
 /* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
-input, textarea {
+input,
+textarea {
     -webkit-user-select: auto;
 }
 
@@ -169,5 +170,4 @@ pre {
 :where(dialog:modal) {
     all: revert;
 }
-
 </style>
