@@ -24,6 +24,7 @@
         </p>
     </div>
         <NavBar/> 
+        <NuxtLoadingIndicator />
         <NuxtPage keepalive/>
     </ClientOnly>
   </div>
