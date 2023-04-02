@@ -26,7 +26,7 @@
       width: 50%;
 
         // styles spécifiques pour la tablette
-        @media screen and (max-width: $breakpoint-tablet) {
+        @media screen  and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) {
             width: 70%;
         }
 
@@ -46,7 +46,7 @@
         letter-spacing: 0.70px;
         width: 90%;
         font-size: 1.4rem;
-        font-family: 'DrukText-Medium';
+        font-family: 'DrukText-Medium', sans-serif;
       }
     }
 

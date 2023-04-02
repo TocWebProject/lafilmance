@@ -142,15 +142,15 @@ function closePopupVideo() {
     }
 
     button {
+        position: absolute;
+        top: 25px;
+        right: 25px;
         cursor: crosshair;   
         z-index: 10;
-        position: absolute;
-        top: 10px;
         background-color: black;
-        right: 10px;
         color: white;
         font-size: 2rem;
-        font-family: 'DrukText-HeavyItalic';
+        font-family: 'DrukText-HeavyItalic', sans-serif;
     }
 }
 
@@ -170,7 +170,7 @@ function closePopupVideo() {
         width: 95%;
     }
 
-    @media screen and (max-width: $breakpoint-tablet) {
+    @media screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) {
         top: 63%;
         text-align: center;
         width: 100%;
@@ -182,11 +182,11 @@ function closePopupVideo() {
         color: white;
 
         @media screen and (max-width: $breakpoint-mobile) {
-            font-size: 4rem;
+            font-size: 3.3rem;
             width: 90%;
         }
 
-        @media screen and (max-width: $breakpoint-tablet) { 
+        @media screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) { 
             font-size: 6rem;
         }
     }
