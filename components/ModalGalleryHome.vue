@@ -341,8 +341,7 @@ onMounted(() => {
     margin: auto;
     width: 86vw;
     height: 86vh;
-    overflow-y: scroll;
-    overflow-x: hidden;
+    overflow: hidden;
 
     @media screen and (max-width: $breakpoint-mobile) {
         width: 90vw;
