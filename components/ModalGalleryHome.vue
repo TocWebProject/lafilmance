@@ -1,4 +1,7 @@
 <script setup>
+import { onMounted, ref } from 'vue';
+import gsap from 'gsap';
+
 const videos = ref([
     {
         title: 'DRAGSTER – GANJA WAR',
@@ -88,6 +91,23 @@ function closePopupVideo() {
     showVideo.value = false;
     currentVideo.value = null;
 }
+
+function movingBanners() {
+    const q = gsap.utils.selector('.modal');
+    const banners = q('.video-thumbnail .moving-banner');
+
+    const tlMooving = gsap.timeline();
+    tlMooving.to(banners, {
+        ease: "linear", x: "-1000%", duration: 55, repeat: -1
+    });
+}
+
+onMounted(() => {
+    movingBanners();
+});
+
+
+
 </script>
 <template>
     <div class="container">
@@ -107,13 +127,31 @@ function closePopupVideo() {
             <p>{{ currentVideo.description }}</p>
             <button @click="closePopupVideo">Close</button>
         </div>
-        <div v-show="open" class="modal" v-bind:class="{ 'overflow-hidden': showVideo }">
+        <div ref="modal" v-show="open" class="modal" v-bind:class="{ 'overflow-hidden': showVideo }">
             <div v-for="(video, index) in videos" :key="index" class="video-thumbnail" @click="showTheVideo(index)">
                 <video width="320" height="240" autoplay loop muted>
                     <source :src="video.loop" type="video/mp4" />
                 </video>
-                <h3>{{ video.title }}</h3>
-                <p>{{ video.description }}</p>
+                <div class="moving-banner">
+                    <div class="wrapper">
+                        <span>{{ video.title }} -</span>
+                        <span>{{ video.description }} -</span>
+                        <span>{{ video.title }} -</span>
+                        <span>{{ video.description }} -</span>
+                        <span>{{ video.title }} -</span>
+                        <span>{{ video.description }} -</span>
+                        <span>{{ video.title }} -</span>
+                        <span>{{ video.description }} -</span>
+                        <span>{{ video.title }} -</span>
+                        <span>{{ video.description }} -</span>
+                        <span>{{ video.title }} -</span>
+                        <span>{{ video.description }} -</span>
+                        <span>{{ video.title }} -</span>
+                        <span>{{ video.description }} -</span>
+                        <span>{{ video.title }} -</span>
+                        <span>{{ video.description }} -</span>
+                    </div>
+                </div>
             </div>
             <button v-if="!showVideo" @click="closeTheModal">
                 X
@@ -145,7 +183,7 @@ function closePopupVideo() {
         position: absolute;
         top: 25px;
         right: 25px;
-        cursor: crosshair;   
+        cursor: crosshair;
         z-index: 10;
         background-color: black;
         color: white;
@@ -186,13 +224,13 @@ function closePopupVideo() {
             width: 90%;
         }
 
-        @media screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) { 
+        @media screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) {
             font-size: 6rem;
         }
     }
 
     button {
-        cursor: crosshair;   
+        cursor: crosshair;
         margin-top: 1.4rem;
         font-size: 2.4rem;
         position: relative;
@@ -286,6 +324,7 @@ function closePopupVideo() {
     overflow-y: hidden !important;
 }
 
+
 .modal {
     /*
     *  Modal Scrollbar style
@@ -326,7 +365,7 @@ function closePopupVideo() {
         width: 90vw;
         height: 78vh;
     }
-
+          
     button {
         position: fixed;
         top: 10px;
@@ -334,7 +373,7 @@ function closePopupVideo() {
         color: white;
         padding: 5px;
         font-size: 2rem;
-        cursor: crosshair;   
+        cursor: crosshair;
     }
 
     .video-thumbnail {
@@ -343,6 +382,7 @@ function closePopupVideo() {
         height: auto;
         position: relative;
         border: 1px white solid;
+        overflow: hidden;
 
         // styles spécifiques pour la tablette
         @media screen and (max-width: $breakpoint-tablet) {
@@ -360,33 +400,32 @@ function closePopupVideo() {
             object-fit: cover;
         }
 
-        h3 {
+ 
+
+
+        .moving-banner {
             position: absolute;
             bottom: 0;
-            left: 0;
-            right: 0;
-            background-color: rgba(0, 0, 0, 0.8);
-            color: white;
-            padding: 0.5rem;
-            margin: 0;
-        }
+            width: 100%;
+            height: auto;
 
-        p {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background-color: rgba(0, 0, 0, 0.8);
-            color: white;
-            padding: 0.5rem;
-            margin: 0;
-            opacity: 0;
-            transition: opacity 0.3s ease-in-out;
-        }
+            .wrapper {
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                width: max-content;
+                background-color: black;
 
-        &:hover p {
-            opacity: 1;
+                span {
+                    padding: 7px 0px;
+                    font-size: 1.3rem;
+                    color: white;
+                }
+
+            }
         }
     }
 }
-</style>
+</style>    
