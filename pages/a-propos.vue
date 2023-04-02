@@ -50,7 +50,7 @@
     p {
       letter-spacing: 0.70px;
       width: 90%;
-      font-size: 1.4rem;
+      font-size: 1.2rem;
     }
   }
 
