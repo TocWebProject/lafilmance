@@ -6,68 +6,68 @@ const videos = ref([
     {
         title: 'DRAGSTER – GANJA WAR',
         description: 'DRAGSTER – GANJA WAR - Réalisation: Valentin Ordinateur - Années: 2014',
-        loop: 'videos/home/modal/boucles/SNIPPET-CARAMBOLAGE-GAUCHE-DROITE-504x305.mp4',
-        videoUrl: 'videos/home/modal/boucles/SNIPPET-DRAGSTER-GANJA-WAR.mp4',
+        loop: 'videos/home/modal/boucles/BOUCLE-DRAGSTER-GANJA-WAR.mp4',
+        videoUrl: 'videos/home/background/lafilmance-2-resize.mp4',
     },
     {
         title: 'KAVIAR SPECIAL – VORTEX ',
         description: 'KAVIAR SPECIAL – VORTEX - Réalisation: Valentin Ordinateur - Années: 2018',
-        loop: 'videos/home/modal/boucles/SNIPPET-CARAMBOLAGE-GAUCHE-DROITE-504x305.mp4',
-        videoUrl: 'videos/home/modal/boucles/SNIPPET-DRAGSTER-GANJA-WAR.mp4',
+        loop: 'videos/home/modal/boucles/BOUCLE-KAVIAR-SPECIAL-VORTEX.mp4',
+        videoUrl: 'videos/home/background/lafilmance-2-resize.mp4',
     },
     {
         title: 'VOYAGE AU SUD',
         description: 'VOYAGE AU SUD - Réalisation: Valentin Ordinateur - Années: 2018',
-        loop: 'videos/home/modal/boucles/SNIPPET-CARAMBOLAGE-GAUCHE-DROITE-504x305.mp4',
-        videoUrl: 'videos/home/modal/boucles/SNIPPET-DRAGSTER-GANJA-WAR.mp4',
+        loop: 'videos/home/modal/boucles/BOUCLE-VOYAGE-AU-SUD.mp4',
+        videoUrl: 'videos/home/background/lafilmance-2-resize.mp4',
     },
     {
         title: 'CARAMBOLE – GAUCHE DROITE',
         description: 'CARAMBOLE – GAUCHE DROITE - Réalisation: Valentin Ordinateur - Année: 2019',
-        loop: 'videos/home/modal/boucles/SNIPPET-CARAMBOLAGE-GAUCHE-DROITE-504x305.mp4',
-        videoUrl: 'videos/home/modal/boucles/SNIPPET-DRAGSTER-GANJA-WAR.mp4',
+        loop: 'videos/home/modal/boucles/BOUCLE-CARAMBOLAGE-GAUCHE-DROITE.mp4',
+        videoUrl: 'videos/home/background/lafilmance-2-resize.mp4',
     },
     {
         title: 'CARAMBOLE – WEEK END NOSTALGIE',
         description: 'CARAMBOLE – WEEK END NOSTALGIE - Réalisation: Valentin Ordinateur - Année: 2020',
-        loop: 'videos/home/modal/boucles/SNIPPET-CARAMBOLAGE-GAUCHE-DROITE-504x305.mp4',
-        videoUrl: 'videos/home/modal/boucles/SNIPPET-DRAGSTER-GANJA-WAR.mp4',
+        loop: 'videos/home/modal/boucles/BOUCLE-CARAMBOLAGE-WEEK-END-NOSTALGIE.mp4',
+        videoUrl: 'videos/home/background/lafilmance-2-resize.mp4',
     },
     {
         title: 'JULIETTE CATROUX - SI TU SITUES',
         description: 'JULIETTE CATROUX - SI TU SITUES - Réalisation: Valentin Ordinateur - Année: 2020',
-        loop: 'videos/home/modal/boucles/SNIPPET-CARAMBOLAGE-GAUCHE-DROITE-504x305.mp4',
-        videoUrl: 'videos/home/modal/boucles/SNIPPET-DRAGSTER-GANJA-WAR.mp4',
+        loop: 'videos/home/modal/boucles/BOUCLE-JULIETTE-CATROUX-SI-TU-SITUES.mp4',
+        videoUrl: 'videos/home/background/lafilmance-2-resize.mp4',
     },
     {
         title: 'LIL RHIZ0ME - SILVER SKIES',
         description: 'LIL RHIZ0ME - SILVER SKIES - Réalisation: Valentin Ordinateur - Année: 2021',
-        loop: 'videos/home/modal/boucles/SNIPPET-CARAMBOLAGE-GAUCHE-DROITE-504x305.mp4',
-        videoUrl: 'videos/home/modal/boucles/SNIPPET-DRAGSTER-GANJA-WAR.mp4',
+        loop: 'videos/home/modal/boucles/BOUCLE-LIL-RHIZOME-SILVER-SKIES.mp4',
+        videoUrl: 'videos/home/background/lafilmance-2-resize.mp4',
     },
     {
         title: 'TEASER SORTIE SINGLE L.L',
         description: 'TEASER SORTIE SINGLE L.L - Réalisation: Valentin Ordinateur - Année: 2021',
-        loop: 'videos/home/modal/boucles/SNIPPET-CARAMBOLAGE-GAUCHE-DROITE-504x305.mp4',
-        videoUrl: 'videos/home/modal/boucles/SNIPPET-DRAGSTER-GANJA-WAR.mp4',
+        loop: 'videos/home/modal/boucles/BOUCLE-JULIETTE-CATROUX-SI-TU-SITUES.mp4',
+        videoUrl: 'videos/home/background/lafilmance-2-resize.mp4',
     },
     {
         title: '$AFIA BAHMED SCHWARTZ',
         description: '$AFIA BAHMED SCHWARTZ – ESCAPE GAME - Réalisation: Valentin Ordinateur - Année: 2022',
-        loop: 'videos/home/modal/boucles/SNIPPET-CARAMBOLAGE-GAUCHE-DROITE-504x305.mp4',
-        videoUrl: 'videos/home/modal/boucles/SNIPPET-DRAGSTER-GANJA-WAR.mp4',
+        loop: 'videos/home/modal/boucles/BOUCLE-SAFIA-BAHMED-SCHWARTZ-ESCAPE-GAME.mp4',
+        videoUrl: 'videos/home/background/lafilmance-2-resize.mp4',
     },
     {
         title: 'ELAKA – FUCK',
         description: 'ELAKA – FUCK - Réalisation: Valentin Ordinateur - Année: 2022',
-        loop: 'videos/home/modal/boucles/SNIPPET-CARAMBOLAGE-GAUCHE-DROITE-504x305.mp4',
-        videoUrl: 'videos/home/modal/boucles/SNIPPET-DRAGSTER-GANJA-WAR.mp4',
+        loop: 'videos/home/modal/boucles/BOUCLE-JULIETTE-CATROUX-SI-TU-SITUES.mp4',
+        videoUrl: 'videos/home/background/lafilmance-2-resize.mp4',
     },
     {
         title: 'SYDNEY VALETTE – ADIEU',
         description: 'SYDNEY VALETTE – ADIEU - Réalisation: Valentin Ordinateur - Année: 2022',
-        loop: 'videos/home/modal/boucles/SNIPPET-CARAMBOLAGE-GAUCHE-DROITE-504x305.mp4',
-        videoUrl: 'videos/home/modal/boucles/SNIPPET-DRAGSTER-GANJA-WAR.mp4',
+        loop: 'videos/home/modal/boucles/BOUCLE-SYDNEY-VALETTE-ADIEU.mp4',
+        videoUrl: 'videos/home/background/lafilmance-2-resize.mp4',
     },
     // Add more videos as needed
 ]);
@@ -350,12 +350,8 @@ onMounted(() => {
 
     .close-modal {
         position: absolute;
-        /* don't need to go crazy with z-index here, just sits over .modal-guts */
         z-index: 12;
-
         top: 10px;
-
-        /* needs to look OK with or without scrollbar */
         right: 20px;
         position: absolute;
         color: white;
