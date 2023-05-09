@@ -141,7 +141,7 @@ onMounted(() => {
 
             <div class="inner-modal">
                 <div v-for="(video, index) in videos" :key="index" class="video-thumbnail" @click="showTheVideo(index)">
-                    <video width="320" height="240" autoplay loop  preload="auto" muted>
+                    <video width="320" height="240" autoplay loop  preload="metadata" muted>
                         <source :src="video.loop" type="video/mp4" />
                     </video>
                     <div class="moving-banner">
