@@ -26,7 +26,7 @@
   }
 
   a {
-    font-family: 'DrukText-HeavyItalic';
+    font-family: 'DrukText-HeavyItalic', Helvetica, Arial, Verdana, Tahoma, sans-serif;
     padding: 15px;
     font-size: 2rem;
     color: white;

@@ -69,6 +69,12 @@ const videos = ref([
         loop: 'videos/home/modal/boucles/BOUCLE-SYDNEY-VALETTE-ADIEU.mp4',
         videoUrl: 'videos/home/background/lafilmance-2-resize.mp4',
     },
+    {
+        title: 'DOR - VUELTA 4 "Mille Feux" (Visualizer) ft. Sancho Panch',
+        description: 'DOR - VUELTA 4 "Mille Feux" (Visualizer) ft. Sancho Panch - Réalisation: Valentin Ordinateur - Année: 2023',
+        loop: 'videos/home/modal/boucles/BOUCLE-ELAKA.mp4',
+        videoUrl: 'videos/home/background/lafilmance-2-resize.mp4',
+    },
     // Add more videos as needed
 ]);
 
@@ -135,7 +141,7 @@ onMounted(() => {
 
             <div class="inner-modal">
                 <div v-for="(video, index) in videos" :key="index" class="video-thumbnail" @click="showTheVideo(index)">
-                    <video width="320" height="240" autoplay loop muted>
+                    <video width="320" height="240" autoplay loop  preload="auto" muted>
                         <source :src="video.loop" type="video/mp4" />
                     </video>
                     <div class="moving-banner">
@@ -190,7 +196,6 @@ onMounted(() => {
         right: 25px;
         cursor: crosshair;
         z-index: 10;
-        background-color: black;
         color: white;
         font-size: 2rem;
         font-family: 'DrukText-HeavyItalic', sans-serif;
@@ -220,7 +225,7 @@ onMounted(() => {
     }
 
     h1 {
-        font-family: 'DrukText-HeavyItalic';
+        font-family: 'DrukText-HeavyItalic', Helvetica, Arial, Verdana, Tahoma, sans-serif;
         font-size: 7rem;
         color: white;
 
@@ -241,7 +246,7 @@ onMounted(() => {
         position: relative;
         border-bottom: 2px white solid;
         color: white;
-        font-family: 'DrukText-Bold';
+        font-family: 'DrukText-Bold', Helvetica, Arial, Verdana, Tahoma, sans-serif;
         text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
             0.025em 0.04em 0 #fffc00;
         animation: glitch 725ms infinite;
@@ -331,7 +336,7 @@ onMounted(() => {
 
 .modal {
     border: 2px white solid;
-    font-family: 'DrukText-Bold';
+    font-family: 'DrukText-Bold', Helvetica, Arial, Verdana, Tahoma, sans-serif;
     background-color: black;
     z-index: 11;
     position: fixed;
@@ -354,6 +359,7 @@ onMounted(() => {
         top: 10px;
         right: 20px;
         position: absolute;
+        background-color: transparent;
         color: white;
         padding: 5px;
         font-size: 2rem;
@@ -426,7 +432,6 @@ onMounted(() => {
                 height: auto;
 
                 .wrapper {
-                    width: 100%;
                     height: auto;
                     display: flex;
                     flex-direction: row;

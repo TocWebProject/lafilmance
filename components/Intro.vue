@@ -31,12 +31,12 @@ import gsap from 'gsap';
 <template>
     <div ref="introContainer" class="intro-container">
         <div ref="screen1" class="screen1">
-            <video ref="videoPlayer" width="320" height="240" autoplay loop muted>
+            <video ref="videoPlayer" width="320" height="240" autoplay loop preload="auto" muted>
                 <source src="\videos\home\background\production_ID_4990242.mp4"  type="video/mp4" />
             </video>
         </div>
         <div ref="screen2" class="screen2">
-            <video ref="videoPlayer" width="320" height="240" autoplay loop muted>
+            <video ref="videoPlayer" width="320" height="240" autoplay loop preload="auto" muted>
                 <source src="\videos\home\background\production_ID_4990242.mp4"  type="video/mp4" />
             </video>
         </div>
@@ -45,7 +45,6 @@ import gsap from 'gsap';
 <style lang="scss" scoped>
 .intro-container {
     overflow: hidden;
-    display: block;
     position: absolute;
     top: 0;
     left: 0;
