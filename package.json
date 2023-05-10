@@ -12,7 +12,7 @@
   "devDependencies": {
     "@types/three": "^0.146.0",
     "@vueuse/core": "^9.6.0",
-    "nuxt": "^3.2.0",
+    "nuxt": "^3.4.3",
     "three": "^0.146.0"
   },
   "dependencies": {
