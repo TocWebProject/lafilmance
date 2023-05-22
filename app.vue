@@ -13,18 +13,11 @@ nuxtApp.hook("page:finish", () => {
 </script>
 
 <template>
-    <div>
-        <ClientOnly>
-            <div v-if="loading" class="loading">
-                <p>
-                    LAFILMANCE
-                </p>
-            </div>
-            <NavBar />
-            <NuxtLoadingIndicator />
-            <NuxtPage keepalive />
-        </ClientOnly>
-    </div>
+    <NuxtLayout>
+        <NavBar />
+        <NuxtLoadingIndicator />
+        <NuxtPage keepalive />
+    </NuxtLayout>
 </template>
 
 <style lang="scss">
