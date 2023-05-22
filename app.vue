@@ -17,6 +17,7 @@ nuxtApp.hook("page:finish", () => {
         <NavBar />
         <NuxtLoadingIndicator />
         <NuxtPage keepalive />
+        <HomeBgVideo />
     </NuxtLayout>
 </template>
 

@@ -4,10 +4,6 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: 'LA FILMANCE',
-      meta: [
-        { hid: 'robots', name: 'robots', content: 'noindex, nofollow' },
-        { name: 'description', content: 'La Filmance est un studio spécialisé dans l\'art visuel vidéo. Prise de vue, animation 3D, VFX, sont autant de techniques d\'exploration et de création de nouveaux champs visuels' }
-      ],
     }
   },
   vite: {
