@@ -22,7 +22,9 @@ definePageMeta({
 <template>
   <div class="homepage">
       <Intro />
-      <Home3d />
+      <ClientOnly>
+        <Home3d />
+      </ClientOnly>
       <ModalGalleryHome />
   </div>
 </template>

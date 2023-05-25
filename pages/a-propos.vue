@@ -6,13 +6,19 @@ useSeoMeta({
   ogDescription: 'This is my amazing site, let me tell you all about it.',
   ogImage: 'ogImage',
   twitterCard: 'summary_large_image',
-})</script>
+})
+</script>
 <template>
   <div class="about">
     <ClientOnly>
       <div class="text-container">
         <h1>A propos</h1>
-        <p>La Filmance est un studio spécialisé dans l'art visuel vidéo. Prise de vue, animation 3D, VFX, sont autant de techniques d'exploration et de création de nouveaux champs visuels. Sa sphère d'action se focalise essentiellement sur les clips musicaux, mais ses aspirations ont attrait à l'image au sens large. Créée en 2020 par Valentin Ordinateur, La Filmance à pour dessein de représenter l'aspect commercial de sa pratique. Il travaille en parallèle sur le champ expérimental, qui lui sert de laboratoire et de source d'inspiration pour les clips qu'il réalise.</p>
+        <p>La Filmance est un studio spécialisé dans l'art visuel vidéo. Prise de vue, animation 3D, VFX, sont autant de
+          techniques d'exploration et de création de nouveaux champs visuels. Sa sphère d'action se focalise
+          essentiellement sur les clips musicaux, mais ses aspirations ont attrait à l'image au sens large. Créée en 2020
+          par Valentin Ordinateur, La Filmance à pour dessein de représenter l'aspect commercial de sa pratique. Il
+          travaille en parallèle sur le champ expérimental, qui lui sert de laboratoire et de source d'inspiration pour
+          les clips qu'il réalise.</p>
       </div>
     </ClientOnly>
   </div>
@@ -34,16 +40,6 @@ useSeoMeta({
     width: 90%;
     margin: auto;
 
-    // // styles spécifiques pour la tablette
-    // @media screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) {
-    //   width: 70%;
-    // }
-
-    // styles spécifiques pour le mobile
-    // @media screen and (max-width: $breakpoint-mobile) {
-    //   width: 90%;
-    // }
-
     h1 {
       font-family: 'DrukText-Heavy', sans-serif;
       font-size: 3.1rem;
@@ -55,7 +51,15 @@ useSeoMeta({
       letter-spacing: 0.70px;
       width: 100%;
       font-size: 1.6rem;
+
+      @media screen and (max-width: $breakpoint-mobile) {
+        font-size: 1.2rem;
+      }
+
+      @media screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) {
+        font-size: 1.5rem;
+      }
+
     }
   }
-}
-</style>
+}</style>
