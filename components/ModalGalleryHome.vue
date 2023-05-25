@@ -117,11 +117,10 @@ onMounted(() => {
 </script>
 <template>
     <div class="container">
-        <h1>LA FILMANCE</h1>
         <button @click="open = true">
-            <span aria-hidden="true">Découvrir</span>
-            Découvrir
-            <span aria-hidden="true">Découvrir</span>
+            <span aria-hidden="true">LA FILMANCE</span>
+            <h1>LA FILMANCE</h1>
+            <span aria-hidden="true">LA FILMANCE</span>
         </button>
     </div>
 
@@ -242,13 +241,13 @@ onMounted(() => {
     button {
         cursor: crosshair;
         margin-top: 1.4rem;
-        font-size: 2.4rem;
+        font-size: 7rem;
         position: relative;
         border-bottom: 2px white solid;
         color: white;
         font-family: 'DrukText-Bold', Helvetica, Arial, Verdana, Tahoma, sans-serif;
-        text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
-            0.025em 0.04em 0 #fffc00;
+        text-shadow: 0.05em 0 0 #2c2d2d, -0.03em -0.04em 0 #000000,
+            0.025em 0.04em 0 #f6f6f6;
         animation: glitch 725ms infinite;
 
         @media screen and (max-width: $breakpoint-mobile) {
@@ -276,44 +275,44 @@ onMounted(() => {
         }
 
         &:hover {
-            color: rgb(255, 0, 183);
+            color: rgb(78, 76, 78);
             cursor: crosshair;
         }
 
         @keyframes glitch {
             0% {
-                text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+                text-shadow: 0.05em 0 0 red, -0.03em -0.04em 0 #2c2d2d,
                     0.025em 0.04em 0 #fffc00;
             }
 
             15% {
-                text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
-                    0.025em 0.04em 0 #fffc00;
+                text-shadow: 0.05em 0 0 red, -0.03em -0.04em 0 #2c2d2d,
+                    0.025em 0.04em 0 #000000;
             }
 
             16% {
-                text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff,
-                    -0.05em -0.05em 0 #fffc00;
+                text-shadow: -0.05em -0.025em 0 red, 0.025em 0.035em 0 #2c2d2d,
+                    -0.05em -0.05em 0 #000000;
             }
 
             49% {
-                text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff,
-                    -0.05em -0.05em 0 #fffc00;
+                text-shadow: -0.05em -0.025em 0 red, 0.025em 0.035em 0 #2c2d2d,
+                    -0.05em -0.05em 0 #000000;
             }
 
             50% {
-                text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff,
-                    0 -0.04em 0 #fffc00;
+                text-shadow: 0.05em 0.035em 0 red, 0.03em 0 0 #2c2d2d,
+                    0 -0.04em 0 #000000;
             }
 
             99% {
-                text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff,
-                    0 -0.04em 0 #fffc00;
+                text-shadow: 0.05em 0.035em 0 red, 0.03em 0 0 #2c2d2d,
+                    0 -0.04em 0 #000000;
             }
 
             100% {
-                text-shadow: -0.05em 0 0 #00fffc, -0.025em -0.04em 0 #fc00ff,
-                    -0.04em -0.025em 0 #fffc00;
+                text-shadow: -0.05em 0 0 red, -0.025em -0.04em 0 #2c2d2d,
+                    -0.04em -0.025em 0 #000000;
             }
         }
     }
