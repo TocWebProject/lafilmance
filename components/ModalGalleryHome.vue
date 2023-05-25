@@ -243,7 +243,6 @@ onMounted(() => {
         margin-top: 1.4rem;
         font-size: 7rem;
         position: relative;
-        border-bottom: 2px white solid;
         color: white;
         font-family: 'DrukText-Bold', Helvetica, Arial, Verdana, Tahoma, sans-serif;
         text-shadow: 0.05em 0 0 #2c2d2d, -0.03em -0.04em 0 #000000,
@@ -281,37 +280,37 @@ onMounted(() => {
 
         @keyframes glitch {
             0% {
-                text-shadow: 0.05em 0 0 red, -0.03em -0.04em 0 #2c2d2d,
-                    0.025em 0.04em 0 #fffc00;
+                text-shadow: 0.05em 0 0 gray, -0.03em -0.04em 0 #2c2d2d,
+                    0.025em 0.04em 0 #dfdfdf;
             }
 
             15% {
-                text-shadow: 0.05em 0 0 red, -0.03em -0.04em 0 #2c2d2d,
+                text-shadow: 0.05em 0 0 gray, -0.03em -0.04em 0 #2c2d2d,
                     0.025em 0.04em 0 #000000;
             }
 
             16% {
-                text-shadow: -0.05em -0.025em 0 red, 0.025em 0.035em 0 #2c2d2d,
+                text-shadow: -0.05em -0.025em 0 gray, 0.025em 0.035em 0 #2c2d2d,
                     -0.05em -0.05em 0 #000000;
             }
 
             49% {
-                text-shadow: -0.05em -0.025em 0 red, 0.025em 0.035em 0 #2c2d2d,
+                text-shadow: -0.05em -0.025em 0 gray, 0.025em 0.035em 0 #2c2d2d,
                     -0.05em -0.05em 0 #000000;
             }
 
             50% {
-                text-shadow: 0.05em 0.035em 0 red, 0.03em 0 0 #2c2d2d,
+                text-shadow: 0.05em 0.035em 0 gray, 0.03em 0 0 #2c2d2d,
                     0 -0.04em 0 #000000;
             }
 
             99% {
-                text-shadow: 0.05em 0.035em 0 red, 0.03em 0 0 #2c2d2d,
+                text-shadow: 0.05em 0.035em 0 gray, 0.03em 0 0 #2c2d2d,
                     0 -0.04em 0 #000000;
             }
 
             100% {
-                text-shadow: -0.05em 0 0 red, -0.025em -0.04em 0 #2c2d2d,
+                text-shadow: -0.05em 0 0 gray, -0.025em -0.04em 0 #2c2d2d,
                     -0.04em -0.025em 0 #000000;
             }
         }

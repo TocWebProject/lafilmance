@@ -66,10 +66,6 @@ useSeoMeta({
         &:hover {
           color: gray;
         }
-        // color: red;
-        // &:hover {
-        //   color: rgb(100, 4, 4);
-        // }
       }
 
       @media screen and (max-width: $breakpoint-mobile) {
