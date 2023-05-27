@@ -33,10 +33,10 @@ video {
   position: fixed;
   top: 0;
   left: 0;
-  width: 130%;
-  height: 130%;
-  transform: translateX(-10%);
+  width: 100%;
+  height: 100%;
   overflow: hidden;
+  object-fit: cover;
   z-index: -1;
 }
 </style>

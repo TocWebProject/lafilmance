@@ -140,7 +140,7 @@ onMounted(() => {
 
             <div class="inner-modal">
                 <div v-for="(video, index) in videos" :key="index" class="video-thumbnail" @click="showTheVideo(index)">
-                    <video width="320" height="240" autoplay loop   muted>
+                    <video width="320" height="240" autoplay loop muted>
                         <source :src="video.loop" type="video/mp4" />
                     </video>
                     <div class="moving-banner">
@@ -224,9 +224,9 @@ onMounted(() => {
     }
 
     h1 {
-        font-family: 'DrukText-HeavyItalic', Helvetica, Arial, Verdana, Tahoma, sans-serif;
-        font-size: 7rem;
-        color: white;
+        // font-family: 'DrukText-HeavyItalic', Helvetica, Arial, Verdana, Tahoma, sans-serif;
+        // font-size: 7rem;
+        // color: white;
 
         @media screen and (max-width: $breakpoint-mobile) {
             font-size: 3.3rem;
@@ -239,12 +239,12 @@ onMounted(() => {
     }
 
     button {
+        font-family: 'DrukText-HeavyItalic', Helvetica, Arial, Verdana, Tahoma, sans-serif;
+        font-size: 7rem;
         cursor: crosshair;
         margin-top: 1.4rem;
-        font-size: 7rem;
         position: relative;
         color: white;
-        font-family: 'DrukText-Bold', Helvetica, Arial, Verdana, Tahoma, sans-serif;
         text-shadow: 0.05em 0 0 #2c2d2d, -0.03em -0.04em 0 #000000,
             0.025em 0.04em 0 #f6f6f6;
         animation: glitch 725ms infinite;
@@ -356,7 +356,6 @@ onMounted(() => {
         z-index: 12;
         top: 10px;
         right: 20px;
-        position: absolute;
         background-color: transparent;
         color: white;
         padding: 5px;
