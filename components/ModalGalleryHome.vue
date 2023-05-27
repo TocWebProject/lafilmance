@@ -223,12 +223,6 @@ onMounted(() => {
         width: 100%;
     }
 
-    h1 {
-        @media screen and (max-width: $breakpoint-mobile) {
-            width: 90%;
-        }
-    }
-
     button {
         font-family: 'DrukText-HeavyItalic', Helvetica, Arial, Verdana, Tahoma, sans-serif;
         font-size: 7rem;
@@ -241,7 +235,7 @@ onMounted(() => {
         animation: glitch 725ms infinite;
 
         @media screen and (max-width: $breakpoint-mobile) {
-            font-size: 2rem
+            font-size: 4rem
         }
 
         span {
