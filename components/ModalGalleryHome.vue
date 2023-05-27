@@ -224,17 +224,8 @@ onMounted(() => {
     }
 
     h1 {
-        // font-family: 'DrukText-HeavyItalic', Helvetica, Arial, Verdana, Tahoma, sans-serif;
-        // font-size: 7rem;
-        // color: white;
-
         @media screen and (max-width: $breakpoint-mobile) {
-            font-size: 3.3rem;
             width: 90%;
-        }
-
-        @media screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) {
-            font-size: 6rem;
         }
     }
 
