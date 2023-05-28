@@ -140,7 +140,7 @@ onMounted(() => {
 
             <div class="inner-modal">
                 <div v-for="(video, index) in videos" :key="index" class="video-thumbnail" @click="showTheVideo(index)">
-                    <video width="320" height="240" autoplay loop muted>
+                    <video poster="\videos\home\modal\boucles\test_poster_vignette-min.png" width="320" height="240" autoplay loop muted>
                         <source :src="video.loop" type="video/mp4" />
                     </video>
                     <div class="moving-banner">

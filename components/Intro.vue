@@ -9,7 +9,7 @@ import gsap from 'gsap';
     function animationTransition() {
       const tlTransition = gsap.timeline();
       tlTransition.to(screen2.value, {
-        ease: "Power1.easeInOut", x: "105%", duration: 1.3, delay: 1.2, zIndex: -10,
+        ease: "Power1.easeInOut", x: "105%", duration: 1.3, delay: 1.3, zIndex: -10,
       });
       tlTransition.to(screen1.value, {
         ease: "Power1.easeInOut", x: "-105%", duration: 1.3 ,zIndex: -10
@@ -31,12 +31,12 @@ import gsap from 'gsap';
 <template>
     <div ref="introContainer" class="intro-container">
         <div ref="screen1" class="screen1">
-            <video ref="videoPlayer" width="320" height="240" autoplay loop  muted>
+            <video ref="videoPlayer" width="320" height="240" poster="\video\home\background\poster_intro_2-min.png" autoplay loop  muted>
                 <source src="\videos\home\background\production_ID_4990242.mp4"  type="video/mp4" />
             </video>
         </div>
         <div ref="screen2" class="screen2">
-            <video ref="videoPlayer" width="320" height="240" autoplay loop  muted>
+            <video ref="videoPlayer" width="320" height="240" poster="\video\home\background\poster_intro_1-min.png" autoplay loop  muted>
                 <source src="\videos\home\background\production_ID_4990242.mp4"  type="video/mp4" />
             </video>
         </div>

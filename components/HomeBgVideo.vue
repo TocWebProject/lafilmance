@@ -22,7 +22,7 @@ onActivated(() => {
 </script>
 <template>
   <div class="video-container">
-    <video ref="videoPlayer" width="320" height="240" autoplay loop muted>
+    <video ref="videoPlayer" width="320" height="240" poster="\video\home\background\poster_bg_video-min.png" autoplay loop muted>
       <source src="\videos\home\background\lafilmance-2-resize.mp4" type="video/mp4" />
     </video>
   </div>
