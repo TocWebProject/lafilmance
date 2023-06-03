@@ -1,40 +1,41 @@
 <script setup lang="ts">
-import { Scene, PerspectiveCamera, WebGLRenderer, Color, Fog, AmbientLight } from 'three'
+import { Scene, PerspectiveCamera, WebGLRenderer, AmbientLight } from 'three'
 import { Ref } from 'vue'
 import { useWindowSize } from '@vueuse/core'
-//import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 
-
-let gltfObject: GLTFLoader | null = null;
 let renderer: WebGLRenderer
 let controls: OrbitControls
 const experience: Ref<HTMLCanvasElement | null> = ref(null)
 const { width, height } = useWindowSize()
 const aspectRatio = computed(() => width.value / height.value)
-
-const bgColor = new Color('#647AA3')
+// const bgColor = new Color('#647AA3')
 const scene = new Scene()
 
-//scene.fog = new Fog(bgColor, 0.1, 75)
-//scene.background = bgColor
+// Mouse position const for Mouse animation
+const mouseX: Ref<number> = ref(0);
+const mouseY: Ref<number> = ref(0);
+const windowHalfX: number = window.innerWidth / 2;
+const windowHalfY: number = window.innerHeight / 2;
 
-const camera = new PerspectiveCamera(9, aspectRatio.value, 0.3, 1000)
-camera.position.set(20, 1, 0)
+//Camera
+const camera = new PerspectiveCamera(9, aspectRatio.value, 0.3, 5000)
+camera.position.set(16, 1, 0)
 scene.add(camera)
 
-
+// Light
 const ambientLight = new AmbientLight(0xffffff, 1);
 scene.add(ambientLight);
 
+// Gltf Object
 const glfLoader = new GLTFLoader()
-
-
 glfLoader.load('/gltf/home/test8/logogltf.gltf', gltf => {
   scene.add(gltf.scene);
 });
+scene.position.set(0, 0, 0)
 
+// Methods
 function updateCamera() {
   camera.aspect = aspectRatio.value
   camera.updateProjectionMatrix()
@@ -42,6 +43,10 @@ function updateCamera() {
 
 function updateRenderer() {
   renderer.setSize(width.value, height.value)
+  // For mouse animation on gltf
+  camera.position.z += (mouseX.value - camera.position.x) * .001;
+  camera.position.y += (-mouseY.value - camera.position.y) * .0001;
+  camera.lookAt(scene.position);
   renderer.render(scene, camera)
 }
 
@@ -61,9 +66,20 @@ watch(aspectRatio, () => {
 })
 
 onMounted(() => {
+  window.addEventListener('mousemove', onDocumentMouseMove);
   setRenderer()
   loop()
 })
+
+onBeforeUnmount(() => {
+  window.removeEventListener('mousemove', onDocumentMouseMove);
+});
+
+// Fonction pour gérer l'événement "mousemove"
+const onDocumentMouseMove = (event: MouseEvent) => {
+  mouseX.value = (event.clientX - windowHalfX) / 10;
+  mouseY.value = (event.clientY - windowHalfY) / 10;
+};
 
 const loop = () => {
   controls.update()

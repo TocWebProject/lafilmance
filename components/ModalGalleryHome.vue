@@ -225,7 +225,7 @@ onMounted(() => {
 
     button {
         font-family: 'DrukText-HeavyItalic', Helvetica, Arial, Verdana, Tahoma, sans-serif;
-        font-size: 7rem;
+        font-size: 6.5rem;
         cursor: crosshair;
         margin-top: 1.4rem;
         position: relative;
