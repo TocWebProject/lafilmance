@@ -1,0 +1,214 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v1.8.19",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0,
+                1
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "f1980_192-lid-smooth-textured-150k-unwrapped",
+            "rotation" : [
+                0.8751646280288696,
+                0.4831168055534363,
+                -0.012650866061449051,
+                -0.02291700430214405
+            ],
+            "translation" : [
+                -0.6499999761581421,
+                0.6800000071525574,
+                0.014999999664723873
+            ]
+        },
+        {
+            "mesh" : 1,
+            "name" : "f1980_192-smooth-textured-150k-unwrapped",
+            "rotation" : [
+                0.9265254735946655,
+                0.37622299790382385,
+                -0.0009849535999819636,
+                -0.002425648272037506
+            ],
+            "translation" : [
+                -0.5799999833106995,
+                0.6499999761581421,
+                0.012000000104308128
+            ]
+        }
+    ],
+    "materials" : [
+        {
+            "doubleSided" : true,
+            "name" : "Default OBJ",
+            "pbrMetallicRoughness" : {
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.5
+            }
+        },
+        {
+            "doubleSided" : true,
+            "name" : "Default OBJ.001",
+            "pbrMetallicRoughness" : {
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.5
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "f1980_192-lid-smooth-textured-150k-unwrapped.001",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2
+                    },
+                    "indices" : 3,
+                    "material" : 0
+                }
+            ]
+        },
+        {
+            "name" : "f1980_192-smooth-textured-150k-unwrapped",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 4,
+                        "NORMAL" : 5,
+                        "TEXCOORD_0" : 6
+                    },
+                    "indices" : 7,
+                    "material" : 1
+                }
+            ]
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 79739,
+            "max" : [
+                -0.009789000265300274,
+                0.8475760221481323,
+                0.03298800066113472
+            ],
+            "min" : [
+                -0.0847110003232956,
+                0.7513650059700012,
+                -0.07957399636507034
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 79739,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 79739,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5125,
+            "count" : 450000,
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 4,
+            "componentType" : 5126,
+            "count" : 79124,
+            "max" : [
+                0.1396380066871643,
+                1.049818992614746,
+                0.09429799765348434
+            ],
+            "min" : [
+                -0.21744099259376526,
+                0.6856920123100281,
+                -0.07794699817895889
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 5,
+            "componentType" : 5126,
+            "count" : 79124,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 6,
+            "componentType" : 5126,
+            "count" : 79124,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 7,
+            "componentType" : 5125,
+            "count" : 449997,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 956868,
+            "byteOffset" : 0
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 956868,
+            "byteOffset" : 956868
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 637912,
+            "byteOffset" : 1913736
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 1800000,
+            "byteOffset" : 2551648
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 949488,
+            "byteOffset" : 4351648
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 949488,
+            "byteOffset" : 5301136
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 632992,
+            "byteOffset" : 6250624
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 1799988,
+            "byteOffset" : 6883616
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 8683604,
+            "uri" : "potiche.bin"
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "lafilmance",
+  "author": "TocWebProject - https://github.com/TocWebProject",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@types/three": "^0.146.0",
+    "@vueuse/core": "^9.6.0",
+    "nuxt": "^3.7.0",
+    "three": "^0.146.0"
+  },
+  "dependencies": {
+    "gsap": "^3.11.4",
+    "sass": "^1.58.0",
+    "sass-loader": "^13.2.0"
+  }
+}
