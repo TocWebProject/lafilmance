@@ -213,7 +213,7 @@ onMounted(() => {
     flex-direction: column;
 
     @media screen and (max-width: $breakpoint-mobile) {
-        top: 63%;
+        top: 56%;
         text-align: center;
         width: 95%;
     }
@@ -328,8 +328,8 @@ onMounted(() => {
     left: 50%;
     transform: translate(-50%, -50%);
     margin: auto;
-    width: 86vw;
-    height: 86vh;
+    width: 85vw;
+    height: 82vh;
     overflow: hidden;
 
     @media screen and (max-width: $breakpoint-mobile) {
