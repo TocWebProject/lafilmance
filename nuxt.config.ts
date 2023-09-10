@@ -21,4 +21,5 @@ export default defineNuxtConfig({
       }
     }
   },
+  modules: ['@nuxtjs/fontaine']
 })
