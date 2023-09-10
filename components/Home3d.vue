@@ -21,7 +21,11 @@ const windowHalfY: number = window.innerHeight / 2;
 
 //Camera
 const camera = new PerspectiveCamera(9, aspectRatio.value, 0.3, 5000)
-camera.position.set(16, 1, 0)
+if (window.innerWidth > 560) {
+  camera.position.set(16, 1, 0)
+} else {
+  camera.position.set(23, 1, 0)
+}
 scene.add(camera)
 
 // Light
