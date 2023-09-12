@@ -12,9 +12,11 @@
   "devDependencies": {
     "@nuxtjs/fontaine": "^0.4.1",
     "@types/three": "^0.146.0",
+    "@videojs-player/vue": "^1.0.0",
     "@vueuse/core": "^9.6.0",
     "nuxt": "^3.7.0",
-    "three": "^0.146.0"
+    "three": "^0.146.0",
+    "video.js": "^8.5.2"
   },
   "dependencies": {
     "gsap": "^3.11.4",

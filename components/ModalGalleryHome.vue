@@ -128,7 +128,9 @@ onMounted(() => {
     <Teleport to="body">
         <div v-if="open" class="outside" @click="closeTheModal"></div>
         <div v-if="showVideo" class="video-popup">
-            <video :src="currentVideo.videoUrl" autoplay muted controls></video>
+            <video-player
+ :core="HLSCore" :src="currentVideo.videoUrl" autoplay muted controls>
+            </video-player>
             <h3>{{ currentVideo.title }}</h3>
             <p>{{ currentVideo.description }}</p>
             <button @click="closePopupVideo">Close</button>
@@ -423,7 +425,7 @@ onMounted(() => {
                     background-color: black;
 
                     span {
-                        padding: 7px 0px;
+                        padding: 8px 2px;
                         font-size: 1.3rem;
                         color: white;
                     }
