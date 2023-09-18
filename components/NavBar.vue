@@ -4,7 +4,7 @@
   <div class="navbar">
     <nav class="nav-items">
       <NuxtLink to="/">Accueil</NuxtLink>
-      <NuxtLink to="/a-propos">À propos</NuxtLink>
+      <NuxtLink to="/a-propos" prefetch >À propos</NuxtLink>
     </nav>
   </div>
 </template>
@@ -18,6 +18,7 @@
   justify-content: space-between;
   width: 100%;
   padding: 10px;
+  z-index: 10;
 
   .nav-items {
     width: 100%;

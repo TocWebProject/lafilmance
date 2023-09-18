@@ -128,8 +128,7 @@ onMounted(() => {
     <Teleport to="body">
         <div v-if="open" class="outside" @click="closeTheModal"></div>
         <div v-if="showVideo" class="video-popup">
-            <video-player
- :core="HLSCore" :src="currentVideo.videoUrl" autoplay muted controls>
+            <video-player :src="currentVideo.videoUrl" autoplay muted controls>
             </video-player>
             <h3>{{ currentVideo.title }}</h3>
             <p>{{ currentVideo.description }}</p>
@@ -143,7 +142,8 @@ onMounted(() => {
 
             <div class="inner-modal">
                 <div v-for="(video, index) in videos" :key="index" class="video-thumbnail" @click="showTheVideo(index)">
-                    <video poster="\videos\home\modal\boucles\test_poster_vignette-min.png" width="320" height="240" playsinline="true" disableremoteplayback autoplay loop muted>
+                    <video poster="\videos\home\modal\boucles\test_poster_vignette-min.png" width="320" height="240"
+                        playsinline="true" disableremoteplayback autoplay loop muted>
                         <source :src="video.loop" type="video/mp4" />
                     </video>
                     <div class="moving-banner">
@@ -187,9 +187,15 @@ onMounted(() => {
     justify-content: center;
     align-items: center;
 
-    video {
-        max-width: 100%;
-        max-height: 100%;
+ 
+    .video-js {
+        max-width: 65vw !important;
+        @media screen and (max-width: $breakpoint-mobile) {
+            max-width: 100vw !important;
+        }
+        @media screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) {
+            max-width: 80vw !important;
+        }
     }
 
     button {

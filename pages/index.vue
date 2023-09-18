@@ -1,4 +1,12 @@
 <script setup lang="ts">
+import { useIntroAnimationStore } from '~/store/introAnimation'
+import { storeToRefs } from 'pinia'
+
+const introAnimStore = useIntroAnimationStore();
+const { introAnimation } = storeToRefs(introAnimStore)
+
+await prefetchComponents('ModalGalleryHome')
+
 useSeoMeta({
   title: "La Filmance",
   ogTitle: "La Filmance",
@@ -21,14 +29,8 @@ definePageMeta({
 </script>
 <template>
   <div class="homepage">
-      <Intro />
-      <ClientOnly>
+      <Intro v-if="introAnimation === false" />
         <Home3d />
-      </ClientOnly>
       <ModalGalleryHome />
   </div>
 </template>
-
-<style lang="scss">
-
-</style>

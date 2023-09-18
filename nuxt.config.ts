@@ -21,5 +21,5 @@ export default defineNuxtConfig({
       }
     }
   },
-  modules: ['@nuxtjs/fontaine']
+  modules: ['@nuxtjs/fontaine','@pinia/nuxt']
 })
