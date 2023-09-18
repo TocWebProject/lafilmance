@@ -23,7 +23,7 @@ onActivated(() => {
 <template>
   <div class="video-container">
     <video ref="videoPlayer" width="320" playsinline="true" disableremoteplayback height="240" poster="\videos\home\background\poster_bg_video-min.png" autoplay loop muted>
-      <source src="\videos\home\background\lafilmance-2-resize.mp4" type="video/mp4" />
+      <source src="\videos\home\background\background-clip-la-filmance-comp.mp4" type="video/mp4" />
     </video>
   </div>
 </template>
