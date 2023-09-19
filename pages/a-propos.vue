@@ -33,6 +33,7 @@ useSeoMeta({
   color: white;
 
   .text-container {
+    pointer-events: none;
     overflow: hidden;
     position: absolute;
     top: 50%;
@@ -76,6 +77,7 @@ useSeoMeta({
       }
 
       a {
+        pointer-events: all;
         text-decoration: underline;
         &:hover {
           color: gray;
