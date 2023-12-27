@@ -1,5 +1,6 @@
 $breakpoint-tablet: 1095px;
 $breakpoint-mobile: 480px;
+$theme-color:#FFF300;
 
 @each $font in ('DrukText-Bold', 'DrukText-BoldItalic', 'DrukText-Heavy', 'DrukText-HeavyItalic', 'DrukText-Medium', 'DrukText-MediumItalic', ) {
   @font-face {
@@ -26,5 +27,6 @@ body {
 
 a,
 button {
-  cursor: crosshair;
+  -webkit-tap-highlight-color: transparent; /* remove tap highlight */
+  cursor: pointer;
 }

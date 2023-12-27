@@ -4,14 +4,13 @@ import { Ref } from 'vue'
 import { useWindowSize } from '@vueuse/core'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
-import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader'
+import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js'
 
 let renderer: WebGLRenderer
 let controls: OrbitControls
 const experience: Ref<HTMLCanvasElement | null> = ref(null)
 const { width, height } = useWindowSize()
 const aspectRatio = computed(() => width.value / height.value)
-// const bgColor = new Color('#647AA3')
 const scene = new Scene()
 
 // Mouse position const for Mouse animation
@@ -23,30 +22,30 @@ const windowHalfY: number = window.innerHeight / 2;
 //Camera
 const camera = new PerspectiveCamera(9.5, aspectRatio.value, 0.3, 5000)
 if (window.innerWidth > 560) {
-  camera.position.set(13, 1, 0)
+  camera.position.set(15, 1, 0)
 } else {
-  camera.position.set(20, 1, 0)
+  camera.position.set(27, 1, 0)
 }
 scene.add(camera)
 
 // Light
-const ambientLight = new AmbientLight(0xffffff, 1);
+const ambientLight = new AmbientLight(0xffffff, 1.6);
 scene.add(ambientLight);
 
 // Gltf Object
 const gltfLoader = new GLTFLoader()
 const dracoLoader = new DRACOLoader();
-dracoLoader.setDecoderPath( '/examples/jsm/libs/draco/' );
+dracoLoader.setDecoderPath('/examples/jsm/libs/draco/');
 
-gltfLoader.setDRACOLoader( dracoLoader );
+gltfLoader.setDRACOLoader(dracoLoader);
 
 gltfLoader.load('/gltf/avatar/scene(2).glb', gltf => {
     gltf.scene.position.y = -1.1;
-    if( window.innerWidth > 1095) {
+    if (window.innerWidth > 1095) {
       gltf.scene.position.z = -1;
     }
-
     scene.add(gltf.scene);
+  // }
 });
 scene.position.set(1, 1, 1)
 
@@ -58,12 +57,12 @@ function updateCamera() {
 }
 
 function updateRenderer() {
-    renderer.setSize(width.value, height.value)
-    // For mouse animation on gltf
-    // camera.position.z += (mouseX.value - camera.position.z) * 0.001;
-    // camera.position.y += (-mouseY.value - camera.position.y) * 0.0001;
-    camera.lookAt(scene.position);
-    renderer.render(scene, camera)
+  renderer.setSize(width.value, height.value)
+  // For mouse animation on gltf
+  // camera.position.z += (mouseX.value - camera.position.z) * 0.001;
+  // camera.position.y += (-mouseY.value - camera.position.y) * 0.0001;
+  camera.lookAt(scene.position);
+  renderer.render(scene, camera)
 }
 
 function setRenderer() {
@@ -71,6 +70,10 @@ function setRenderer() {
     renderer = new WebGLRenderer({ canvas: experience.value, alpha: true })
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 10))
     controls = new OrbitControls(camera, renderer.domElement);
+    controls.autoRotate = true;
+    // controls.enableZoom = false;
+    controls.maxPolarAngle = 1.7;
+    controls.minAzimuthAngle = 1.4
     controls.enableDamping = true;
     updateRenderer()
   }
@@ -119,6 +122,7 @@ const loop = () => {
   align-items: center;
   width: 100%;
   height: 100%;
+  overflow: hidden;
 
   &:hover {
     cursor: grab;

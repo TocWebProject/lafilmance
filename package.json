@@ -14,16 +14,19 @@
   },
   "devDependencies": {
     "@nuxtjs/fontaine": "^0.4.1",
+    "@nuxtjs/i18n": "^8.0.0-rc.5",
     "@types/three": "^0.146.0",
     "@videojs-player/vue": "^1.0.0",
     "@vueuse/core": "^9.6.0",
     "nuxt": "^3.7.0",
-    "three": "^0.146.0",
-    "video.js": "^8.5.2"
+    "nuxt-simple-sitemap": "^3.4.0",
+    "three": "^0.146.0"
   },
   "dependencies": {
+    "@nuxtjs/robots": "^3.0.0",
     "@pinia/nuxt": "^0.4.11",
     "gsap": "^3.11.4",
+    "mitt": "^3.0.1",
     "pinia": "^2.1.6",
     "sass": "^1.58.0",
     "sass-loader": "^13.2.0"

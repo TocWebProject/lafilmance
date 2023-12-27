@@ -60,6 +60,9 @@ function setRenderer() {
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 10))
     controls = new OrbitControls(camera, renderer.domElement);
     controls.enableDamping = true;
+    controls.autoRotate = true;
+    // controls.enableZoom = false;
+    controls.maxZoom = 4;
     updateRenderer()
   }
 }
@@ -69,15 +72,15 @@ watch(aspectRatio, () => {
   updateRenderer()
 })
 
-onMounted(() => {
+onMounted(() => nextTick(()=> {
   window.addEventListener('mousemove', onDocumentMouseMove);
   setRenderer()
   loop()
-})
+}));
 
-onBeforeUnmount(() => {
+onBeforeUnmount(() => nextTick(()=> {
   window.removeEventListener('mousemove', onDocumentMouseMove);
-});
+}));
 
 // Fonction pour gérer l'événement "mousemove"
 const onDocumentMouseMove = (event: MouseEvent) => {

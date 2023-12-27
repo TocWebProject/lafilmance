@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 const nuxtApp = useNuxtApp();
 const loading = ref(false);
+console.log("Made with fun by https://tocwebproject.fr")
 
 nuxtApp.hook("page:start", () => {
     loading.value = true;
@@ -13,14 +14,16 @@ nuxtApp.hook("page:finish", () => {
 </script>
 
 <template>
-    <NuxtLayout>
-        <div>
-            <NavBar />
-            <NuxtLoadingIndicator />
-            <NuxtPage keepalive />
-            <HomeBgVideo />
-        </div>
-    </NuxtLayout>
+    <ClientOnly>
+        <NuxtLayout>
+            <div>
+                <NavBar />
+                <NuxtLoadingIndicator />
+                <NuxtPage keepalive />
+                <HomeBgVideo />
+            </div>
+        </NuxtLayout>
+    </ClientOnly>
 </template>
 
 <style lang="scss">
@@ -46,15 +49,24 @@ nuxtApp.hook("page:finish", () => {
 }
 
 /* Global Page Transitions */
-.page-enter-active,
+.page-enter-active {
+    transition: all 0.5s ease-out;
+}
+
 .page-leave-active {
-    transition: all 1s;
+    transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);
 }
 
 .page-enter-from,
 .page-leave-to {
     opacity: 0;
     filter: blur(1rem);
+}
+
+.page-enter-to,
+.page-leave-from {
+    opacity: 1;
+    filter: blur(0);
 }
 
 body {
